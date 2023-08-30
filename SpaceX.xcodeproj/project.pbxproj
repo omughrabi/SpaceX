@@ -24,6 +24,9 @@
 		07965B772A9EA03F00542401 /* RocketsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07965B762A9EA03F00542401 /* RocketsListViewModel.swift */; };
 		07965B792A9EA05D00542401 /* LaunchFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07965B782A9EA05D00542401 /* LaunchFilterViewModel.swift */; };
 		07965B7B2A9EA07200542401 /* RocketsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07965B7A2A9EA07200542401 /* RocketsListView.swift */; };
+		07965B7D2A9F545500542401 /* SX_Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07965B7C2A9F545500542401 /* SX_Service.swift */; };
+		07965B7F2A9F547B00542401 /* SX_Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07965B7E2A9F547B00542401 /* SX_Request.swift */; };
+		07965B812A9F569000542401 /* SX_EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07965B802A9F569000542401 /* SX_EndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		07965B762A9EA03F00542401 /* RocketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModel.swift; sourceTree = "<group>"; };
 		07965B782A9EA05D00542401 /* LaunchFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFilterViewModel.swift; sourceTree = "<group>"; };
 		07965B7A2A9EA07200542401 /* RocketsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListView.swift; sourceTree = "<group>"; };
+		07965B7C2A9F545500542401 /* SX_Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SX_Service.swift; sourceTree = "<group>"; };
+		07965B7E2A9F547B00542401 /* SX_Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SX_Request.swift; sourceTree = "<group>"; };
+		07965B802A9F569000542401 /* SX_EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SX_EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,9 @@
 		07965B5F2A9E569500542401 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				07965B7C2A9F545500542401 /* SX_Service.swift */,
+				07965B7E2A9F547B00542401 /* SX_Request.swift */,
+				07965B802A9F569000542401 /* SX_EndPoint.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -218,10 +227,12 @@
 			files = (
 				07965B752A9EA02A00542401 /* RocketViewModel.swift in Sources */,
 				07965B502A9E500D00542401 /* MainView.swift in Sources */,
+				07965B7F2A9F547B00542401 /* SX_Request.swift in Sources */,
 				07965B7B2A9EA07200542401 /* RocketsListView.swift in Sources */,
 				07965B672A9E9C1F00542401 /* LaunchView.swift in Sources */,
 				07965B652A9E9C0A00542401 /* LaunchesListView.swift in Sources */,
 				07965B612A9E746400542401 /* SX_Lanunch.swift in Sources */,
+				07965B7D2A9F545500542401 /* SX_Service.swift in Sources */,
 				07965B792A9EA05D00542401 /* LaunchFilterViewModel.swift in Sources */,
 				07965B4E2A9E500D00542401 /* SpaceXApp.swift in Sources */,
 				07965B772A9EA03F00542401 /* RocketsListViewModel.swift in Sources */,
@@ -231,6 +242,7 @@
 				07965B6D2A9E9C7B00542401 /* LaunchFilterView.swift in Sources */,
 				07965B632A9E746E00542401 /* SX_Rocket.swift in Sources */,
 				07965B692A9E9C3900542401 /* RocketView.swift in Sources */,
+				07965B812A9F569000542401 /* SX_EndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
