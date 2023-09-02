@@ -14,6 +14,11 @@
 		070DD20B2AA326E60093CA7D /* SX_GetShipsDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DD20A2AA326E60093CA7D /* SX_GetShipsDataSet.swift */; };
 		070DD20D2AA3415E0093CA7D /* CrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DD20C2AA3415E0093CA7D /* CrewView.swift */; };
 		070DD20F2AA35BA50093CA7D /* SX_GetLaunchesDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DD20E2AA35BA50093CA7D /* SX_GetLaunchesDataSet.swift */; };
+		070DD2112AA360290093CA7D /* LaunchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DD2102AA360290093CA7D /* LaunchListView.swift */; };
+		070DD2132AA36BF00093CA7D /* LaunchListUIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DD2122AA36BF00093CA7D /* LaunchListUIViewRepresentable.swift */; };
+		070DD2152AA38AC80093CA7D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DD2142AA38AC80093CA7D /* Extension.swift */; };
+		070DD2172AA3A91D0093CA7D /* LaunchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DD2162AA3A91D0093CA7D /* LaunchCollectionViewCell.swift */; };
+		070DD2192AA3AB580093CA7D /* LaunchCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DD2182AA3AB580093CA7D /* LaunchCollectionViewCellViewModel.swift */; };
 		07965B4E2A9E500D00542401 /* SpaceXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07965B4D2A9E500D00542401 /* SpaceXApp.swift */; };
 		07965B502A9E500D00542401 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07965B4F2A9E500D00542401 /* MainView.swift */; };
 		07965B522A9E500E00542401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07965B512A9E500E00542401 /* Assets.xcassets */; };
@@ -46,6 +51,11 @@
 		070DD20A2AA326E60093CA7D /* SX_GetShipsDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SX_GetShipsDataSet.swift; sourceTree = "<group>"; };
 		070DD20C2AA3415E0093CA7D /* CrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewView.swift; sourceTree = "<group>"; };
 		070DD20E2AA35BA50093CA7D /* SX_GetLaunchesDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SX_GetLaunchesDataSet.swift; sourceTree = "<group>"; };
+		070DD2102AA360290093CA7D /* LaunchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListView.swift; sourceTree = "<group>"; };
+		070DD2122AA36BF00093CA7D /* LaunchListUIViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListUIViewRepresentable.swift; sourceTree = "<group>"; };
+		070DD2142AA38AC80093CA7D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		070DD2162AA3A91D0093CA7D /* LaunchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCollectionViewCell.swift; sourceTree = "<group>"; };
+		070DD2182AA3AB580093CA7D /* LaunchCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		07965B4A2A9E500D00542401 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07965B4D2A9E500D00542401 /* SpaceXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXApp.swift; sourceTree = "<group>"; };
 		07965B4F2A9E500D00542401 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -145,6 +155,7 @@
 			children = (
 				07965B4D2A9E500D00542401 /* SpaceXApp.swift */,
 				07965B512A9E500E00542401 /* Assets.xcassets */,
+				070DD2142AA38AC80093CA7D /* Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -155,11 +166,14 @@
 				07965B4F2A9E500D00542401 /* MainView.swift */,
 				070DD20C2AA3415E0093CA7D /* CrewView.swift */,
 				07965B642A9E9C0A00542401 /* LaunchesListView.swift */,
+				070DD2122AA36BF00093CA7D /* LaunchListUIViewRepresentable.swift */,
+				070DD2102AA360290093CA7D /* LaunchListView.swift */,
 				07965B662A9E9C1F00542401 /* LaunchView.swift */,
 				07965B682A9E9C3900542401 /* RocketView.swift */,
 				07965B6C2A9E9C7B00542401 /* LaunchFilterView.swift */,
 				07965B7A2A9EA07200542401 /* RocketsListView.swift */,
 				070DD2082AA2B6B90093CA7D /* ShipsView.swift */,
+				070DD2162AA3A91D0093CA7D /* LaunchCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +188,7 @@
 				070DD2062AA2B6460093CA7D /* ShipsViewModel.swift */,
 				07965B762A9EA03F00542401 /* RocketsListViewModel.swift */,
 				07965B782A9EA05D00542401 /* LaunchesFilterViewModel.swift */,
+				070DD2182AA3AB580093CA7D /* LaunchCollectionViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -280,7 +295,12 @@
 				07965B652A9E9C0A00542401 /* LaunchesListView.swift in Sources */,
 				07965B612A9E746400542401 /* SX_Lanunch.swift in Sources */,
 				070DD20F2AA35BA50093CA7D /* SX_GetLaunchesDataSet.swift in Sources */,
+				070DD2132AA36BF00093CA7D /* LaunchListUIViewRepresentable.swift in Sources */,
 				07965B7D2A9F545500542401 /* SX_Service.swift in Sources */,
+				070DD2112AA360290093CA7D /* LaunchListView.swift in Sources */,
+				070DD2152AA38AC80093CA7D /* Extension.swift in Sources */,
+				070DD2192AA3AB580093CA7D /* LaunchCollectionViewCellViewModel.swift in Sources */,
+				070DD2172AA3A91D0093CA7D /* LaunchCollectionViewCell.swift in Sources */,
 				07965B792A9EA05D00542401 /* LaunchesFilterViewModel.swift in Sources */,
 				070DD20D2AA3415E0093CA7D /* CrewView.swift in Sources */,
 				07965B852A9FC17C00542401 /* SX_Ship.swift in Sources */,

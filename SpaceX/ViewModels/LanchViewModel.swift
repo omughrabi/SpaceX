@@ -7,6 +7,8 @@
 
 import Foundation
 
-class LaunchViewModel: ObservableObject {
+final class LaunchViewModel: ObservableObject {
+    
+    
     
 }

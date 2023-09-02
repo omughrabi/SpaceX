@@ -5,12 +5,11 @@
 //  Created by Omar on 29.08.23.
 //
 
-import Foundation
+import UIKit
 
-class LaunchesListViewModel: ObservableObject {
+final class LaunchesListViewModel: NSObject {
     
-    
-    
+
     func getLaunhesList() {
         
         let yearInSeconds: Double = 31557600 //number of seconds per year
@@ -65,5 +64,25 @@ class LaunchesListViewModel: ObservableObject {
                 print(String(describing: error))
             }
         }
+    }
+}
+
+extension LaunchesListViewModel : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        cell.backgroundColor = .green
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let bounders = UIScreen.main.bounds
+        let width = (bounders.width - 20)
+        
+        return CGSize(width: width, height: (width * 1.5))
     }
 }

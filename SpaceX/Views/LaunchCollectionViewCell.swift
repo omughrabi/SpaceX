@@ -7,6 +7,26 @@
 
 import UIKit
 
-class LaunchCollectionViewCell: UICollectionViewCell {
+final class LaunchCollectionViewCell: UICollectionViewCell {
+    static let cellIdentifier = "LaunchCollectionViewCell"
     
+    
+    override init(frame: CGRect) {
+        super .init(frame: frame)
+        
+        contentView.backgroundColor = .secondarySystemBackground
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Unsupported")
+    }
+    
+    private func addConstraints() {
+        super.prepareForReuse()
+    }
+    
+    public func configure(with viewModel: LaunchCollectionViewCellViewModel) {
+        
+    }
 }
