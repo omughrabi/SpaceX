@@ -12,4 +12,6 @@ import Foundation
     
     case launches
     case rockets
+    case crew
+    case ships
 }

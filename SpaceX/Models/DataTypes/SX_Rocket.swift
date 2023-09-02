@@ -8,14 +8,12 @@
 import Foundation
 
 struct SX_Rocket: Codable, Identifiable {
-    
-    let id: String
-    let rocketNumber: String
+    let flickr_images: [String]
     let name: String
     let type: String
     let active: Bool
-    let stages: String
-    let boosters: String
+    let stages: Int
+    let boosters: Int
     let cost_per_launch: Double
     let success_rate_pct: Int
     let first_flight: String
@@ -23,6 +21,8 @@ struct SX_Rocket: Codable, Identifiable {
     let company: String
     let wikipedia: URL
     let description: String
+    let id: String
+
 
     
 }

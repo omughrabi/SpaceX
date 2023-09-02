@@ -10,10 +10,11 @@ import Foundation
 class RocketViewModel: ObservableObject {
     
     func getRocket() {
-        SX_Service.shared.execute(.listRocketsRequest, expecting: String.self) { result in
+        SX_Service.shared.execute(.listRocketsRequest, expecting: SX_GetRocketsDataSet.self) { result in
             switch result {
             case .success(let model):
-                print(String(describing: model))
+                print(model.docs[3].flickr_images)
+                print(model.docs[3].flickr_images)
             case .failure(let error):
                 print(String(describing: error))
             }

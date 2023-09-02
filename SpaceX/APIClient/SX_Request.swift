@@ -73,5 +73,9 @@ final class SX_Request {
     }
     
 }
-    
-    
+
+extension SX_Request {
+    static let listRocketsRequest = SX_Request(httpMethod: "POST", endpoint: .rockets, pathComponents: ["query"])
+    static let listCrewMembersRequest = SX_Request(httpMethod: "POST", endpoint: .crew, pathComponents: ["query"])
+    static let listShipsRequest = SX_Request(httpMethod: "GET", endpoint: .ships)
+}

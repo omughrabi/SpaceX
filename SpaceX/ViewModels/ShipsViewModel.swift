@@ -10,10 +10,10 @@ import Foundation
 class ShipsViewModel: ObservableObject {
     
     func getShips() {
-        SX_Service.shared.execute(.listRocketsRequest, expecting: SX_Ship.self) { result in
+        SX_Service.shared.execute(.listShipsRequest, expecting: SX_GetShipsDataSet.self) { result in
             switch result {
             case .success(let model):
-                print(model)
+                print(model.ships[0].name)
             case .failure(let error):
                 print(String(describing: error))
             }

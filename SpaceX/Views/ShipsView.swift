@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ShipsView: View {
+    @StateObject var viewModel = ShipsViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Spacer()
+                
+            }
+            .navigationTitle("SP-X Ships")
+        }
     }
 }
 

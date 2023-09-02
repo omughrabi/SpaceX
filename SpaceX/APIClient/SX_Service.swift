@@ -32,8 +32,8 @@ final class SX_Service {
                 }
                 
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data)
-                    print(String(describing: json))
+                    let result = try JSONDecoder().decode(type.self, from: data)
+                    completion(.success(result))
                 }
                 catch {
                     completion(.failure(error))
@@ -46,8 +46,10 @@ final class SX_Service {
         guard let url = sxRequest.url else {return nil}
         var request = URLRequest(url: url)
         request.httpMethod = sxRequest.httpMethod
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = sxRequest.httpBody.data(using: .utf8)
+        if(sxRequest.httpMethod != "GET"){
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = sxRequest.httpBody.data(using: .utf8)
+        }
         return request
     }
     
