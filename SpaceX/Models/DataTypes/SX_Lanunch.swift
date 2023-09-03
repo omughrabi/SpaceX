@@ -14,7 +14,7 @@ struct SX_Launch: Codable, Identifiable {
     let date_utc: String
     let upcoming: Bool
     let rocket: SX_Rocket
-    let success: Bool
+    let success: Bool?
     let failures: [String]
     let details: String?
     let crew: [SX_Crew]

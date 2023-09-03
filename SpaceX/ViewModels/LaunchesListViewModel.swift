@@ -18,9 +18,7 @@ final class LaunchesListViewModel: NSObject {
     private var launches : [SX_Launch] = [] {
         didSet {
             for launch in launches {
-                
-                print("flight Name: \(launch.flight_number)")
-                
+                                
                 let details = launch.details ?? "No data provided from source for Mession: \(launch.flight_number)"
                 let patchImage = launch.links.patch.small ?? launch.links.patch.large ?? launch.rocket.flickr_images[0]
                 let unixTimeValue = Date(timeIntervalSince1970: launch.date_unix)
@@ -28,7 +26,6 @@ final class LaunchesListViewModel: NSObject {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 let formattedDate = dateFormatter.string(from: unixTimeValue)
-                print(formattedDate)
                 
                             
                 let viewModel = LaunchCollectionViewCellViewModel(flightNumber: String(launch.flight_number), launchName: launch.name, launchDate: formattedDate, launchDetails: details, upComing: launch.upcoming, launchImageURL: URL(string: patchImage))
@@ -43,7 +40,7 @@ final class LaunchesListViewModel: NSObject {
         let yearInSeconds: Double = 31557600 //number of seconds per year
         let yearsRange = yearInSeconds * 3
         let now = Date().timeIntervalSince1970
-        let upcomingMax = Date().addingTimeInterval(+yearsRange).timeIntervalSince1970
+//        let upcomingMax = Date().addingTimeInterval(+yearsRange).timeIntervalSince1970  committing this for now as there is no results for the next 3 years, will check the requirements
         let pastOldest = Date().addingTimeInterval(-yearsRange).timeIntervalSince1970
         let jsonBody = """
     {
@@ -52,8 +49,8 @@ final class LaunchesListViewModel: NSObject {
            {
              "upcoming": true,
                       "date_unix": {
-                        "$gte": \(now),
-                        "$lt": \(upcomingMax)
+                "$gte": \(pastOldest),
+                "$lt": \(now)
              }
            },
            {
@@ -67,6 +64,9 @@ final class LaunchesListViewModel: NSObject {
         },
         "options": {
             "pagination": false,
+             "sort": {
+               "flight_number": "desc"
+             },
              "select": {
                    "fairings": 0,
                    "static_fire_date_utc": 0,

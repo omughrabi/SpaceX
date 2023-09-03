@@ -79,7 +79,7 @@ final class LaunchCollectionViewCell: UICollectionViewCell {
             nameLabel.heightAnchor.constraint(equalToConstant: 50),
             dateLabel.heightAnchor.constraint(equalToConstant: 50),
             detailsLabel.heightAnchor.constraint(equalToConstant: 100),
-            upComing.heightAnchor.constraint(equalToConstant: 30),
+            upComing.heightAnchor.constraint(equalToConstant: 50),
             upComing.widthAnchor.constraint(equalToConstant: 25),
             flighUpcomingLabel.heightAnchor.constraint(equalToConstant: 50),
             flighUpcomingLabel.widthAnchor.constraint(equalToConstant: 72),
@@ -91,27 +91,27 @@ final class LaunchCollectionViewCell: UICollectionViewCell {
             imageView.bottomAnchor.constraint(equalTo: nameLabel.topAnchor),
             
                         
-            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor),
+//            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor),
             nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
             nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
             nameLabel.bottomAnchor.constraint(equalTo: dateLabel.topAnchor),
             
             
-            upComing.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
+//            upComing.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
             upComing.leftAnchor.constraint(equalTo: flighUpcomingLabel.rightAnchor),
             upComing.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
             upComing.bottomAnchor.constraint(equalTo: detailsLabel.topAnchor),
             
-            flighUpcomingLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
+//            flighUpcomingLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
             flighUpcomingLabel.leftAnchor.constraint(equalTo: dateLabel.rightAnchor),
             flighUpcomingLabel.rightAnchor.constraint(equalTo: upComing.leftAnchor),
             flighUpcomingLabel.bottomAnchor.constraint(equalTo: detailsLabel.topAnchor),
             
             
-            dateLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
+//            dateLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
             dateLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
             dateLabel.rightAnchor.constraint(equalTo: flighUpcomingLabel.leftAnchor),
-            dateLabel.bottomAnchor.constraint(equalTo: detailsLabel.topAnchor),
+//            dateLabel.bottomAnchor.constraint(equalTo: detailsLabel.topAnchor),
             
             detailsLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor),
             detailsLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
@@ -121,7 +121,7 @@ final class LaunchCollectionViewCell: UICollectionViewCell {
             
             
         ])
-        
+//        The below background I keep for reviewing the fields adjustments 
 //        nameLabel.backgroundColor = .red
 //        flighUpcomingLabel.backgroundColor = .blue
 //        detailsLabel.backgroundColor = .orange
