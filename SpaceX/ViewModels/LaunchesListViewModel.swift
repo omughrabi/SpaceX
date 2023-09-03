@@ -23,10 +23,15 @@ final class LaunchesListViewModel: NSObject {
                 
                 let details = launch.details ?? "No data provided from source for Mession: \(launch.flight_number)"
                 let patchImage = launch.links.patch.small ?? launch.links.patch.large ?? launch.rocket.flickr_images[0]
+                let unixTimeValue = Date(timeIntervalSince1970: launch.date_unix)
                 
-                print("patchImage: \(patchImage)")
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                let formattedDate = dateFormatter.string(from: unixTimeValue)
+                print(formattedDate)
+                
                             
-                let viewModel = LaunchCollectionViewCellViewModel(flightNumber: String(launch.flight_number), launchName: launch.name, launchDate: launch.date_utc, launchDetails: details, upComing: launch.upcoming, launchImageURL: URL(string: patchImage))
+                let viewModel = LaunchCollectionViewCellViewModel(flightNumber: String(launch.flight_number), launchName: launch.name, launchDate: formattedDate, launchDetails: details, upComing: launch.upcoming, launchImageURL: URL(string: patchImage))
                 cellViewModel.append(viewModel)
             }
         }
