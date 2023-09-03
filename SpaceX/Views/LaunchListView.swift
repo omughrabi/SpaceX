@@ -25,7 +25,7 @@ final class LaunchListView: UIView {
         collectionView.isHidden = true
         collectionView.alpha = 0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(LaunchCollectionViewCell.self, forCellWithReuseIdentifier: LaunchCollectionViewCell.cellIdentifier)
         return collectionView
     }()
     
@@ -38,6 +38,7 @@ final class LaunchListView: UIView {
         addSubViews(collectionView, spinner)
         addSpinnerConstraints()
         spinner.startAnimating()
+        viewModel.delegate = self
         viewModel.getLaunhesList()
         setUpCollectionView()
     }
@@ -64,14 +65,17 @@ final class LaunchListView: UIView {
     private func setUpCollectionView () {
         collectionView.dataSource = viewModel
         collectionView.delegate = viewModel
-     
-        DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-            self.spinner.stopAnimating()
-            self.collectionView.isHidden = false
-            UIView.animate(withDuration: 0.5) {
-                self.collectionView.alpha = 1
-            }
-            
-        })
+    }
+}
+
+extension LaunchListView: LaunchesListViewModelDelegate {
+    func didLoadIntialLaunches() {
+        spinner.stopAnimating()
+        collectionView.isHidden = false
+        collectionView.reloadData()
+        UIView.animate(withDuration: 0.5) {
+            self.collectionView.alpha = 1
+        }
+
     }
 }

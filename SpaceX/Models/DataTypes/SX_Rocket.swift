@@ -14,7 +14,7 @@ struct SX_Rocket: Codable, Identifiable {
     let active: Bool
     let stages: Int
     let boosters: Int
-    let cost_per_launch: Double
+    let cost_per_launch: Double?
     let success_rate_pct: Int
     let first_flight: String
     let country: String
